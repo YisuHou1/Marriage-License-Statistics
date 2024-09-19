@@ -17,6 +17,8 @@ cleaned_data <- raw_data %>%
            sep = "-") %>%
   mutate(date = lubridate::ymd(paste(year, month, "01", sep = "-")))
 
+write_csv(cleaned_data, "data/cleaned_data.csv")
+
 cleaned_data %>% ggplot(aes(x = date, y = marriage_licenses)) + 
   geom_point() + 
   labs(title = "Marriage Licenses in Toronto Before and After Covid",
