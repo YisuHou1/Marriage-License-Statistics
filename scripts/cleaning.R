@@ -17,4 +17,8 @@ cleaned_data <- raw_data %>%
            sep = "-") %>%
   mutate(date = lubridate::ymd(paste(year, month, "01", sep = "-")))
 
-cleaned_data %>% ggplot(aes(x = date, y = marriage_licenses)) + geom_point()
+cleaned_data %>% ggplot(aes(x = date, y = marriage_licenses)) + 
+  geom_point() + 
+  labs(title = "Marriage Licenses in Toronto Before and After Covid",
+       x = "Year", y = "Number of Licenses")
+
