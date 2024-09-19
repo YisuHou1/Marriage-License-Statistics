@@ -1,5 +1,5 @@
 #### Preamble ####
-# Purpose: Simulates Marriage Licenses over Years
+# Purpose: Gather Marriage License Data for Analysis
 # Author: Yisu Hou
 # Date: 19 September 2024
 # Contact: yisu.hou@mail.utoronto.ca

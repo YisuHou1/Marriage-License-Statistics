@@ -19,7 +19,7 @@ end_date <- as.Date("2023-12-31")
 # Set the number of random dates you want to generate
 number_of_dates <- 100
 
-data <-
+data_sim <-
   tibble(
     dates = as.Date(
       runif(
@@ -31,3 +31,5 @@ data <-
     ),
     number_of_marriage = rpois(n = number_of_dates, lambda = 10)
   )
+
+write_csv(data_sim, file = "data/simulated.csv")
