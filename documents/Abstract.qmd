@@ -4,7 +4,11 @@ author:
   - Yisu Hou
 date: today
 date-format: long
-abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
+abstract: "Abstract: There is a lack of research regarding the effects of Covid-19 on
+the number of marriages. As we know, Covid-19 travel lockdowns prevented
+individuals from socializing, so it is more difficult to meet new people and 
+maintain existing romantic relationships. We believe this may be reflected
+with a reduction in marriages during the Covid."
 format: pdf
 number-sections: true
 bibliography: references.bib
@@ -17,68 +21,31 @@ bibliography: references.bib
 
 library(tidyverse)
 
-data <- read_csv(here::here("data/analysis_data/analysis_data.csv"))
+cleaned_data <- read_csv(here::here("data/cleaned_data.csv"))
 
 ```
 
 
-# Introduction
-
-You can and should cross-reference sections and sub-sections. We use @talia, @opendatatorotno, and @rohan.
-
-The remainder of this paper is structured as follows. @sec-mydatasection
-
-
-
-# Data {#sec-mydatasection}
-
-Some of our data is of penguins (@fig-marriage), from @palmerpenguins.
+# Graph
 
 ```{r}
-#| label: fig-marriage
-#| fig-cap: Bills of penguins
 #| echo: false
 
-data |> 
-  ggplot(aes(x = date, y = marriage_licenses)) +
-  geom_point()
-
+cleaned_data %>% ggplot(aes(x = date, y = marriage_licenses)) + 
+  geom_point() + 
+  labs(title = "Figure 1: Marriage Licenses Before and After Covid",
+       x = "Year", y = "Number of Licenses")
 ```
-
-Talk more about it.
-
-And also planes (@fig-planes). (You can change the height and width, but don't worry about doing that until you have finished every other aspect of the paper - Quarto will try to make it look nice and the defaults usually work well once you have enough text.)
-
-
-
-
-
-# Discussion
-
-## First discussion point {#sec-first-point}
-
-If my paper were 10 pages, then should be be at least 2.5 pages. The discussion is a chance to show off what you know and what you learnt from all this. 
-
-## Second discussion point
-
-## Third discussion point
-
-## Weaknesses and next steps
-
-Weaknesses and next steps should also be included.
-
-\newpage
-
-\appendix
-
-# Appendix {-}
-
-
-# Additional data details
-
-
-
-\newpage
-
+&nbsp;&nbsp; Observing Figure 1, we can observe that the number of marriage licenses did not
+decrease after Covid-19. In fact, the data shows an increases in the peak values
+after the pandemic. However, this doesn't necessarily imply that the number of 
+marriages increased after Covid because the scatter of the data points in the 
+graph demonstrates that the data was potentially measured differently before and 
+after 2020. Thus, there may be measuring bias, and the result may be inconclusive.
 
 # References
+
+@opendatatorotno
+@thereferencecanbewhatever
+@talia
+@dplyr
