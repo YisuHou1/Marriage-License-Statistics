@@ -43,7 +43,6 @@ marriages increased after Covid because the scatter of the data points in the
 graph demonstrates that the data was potentially measured differently before and 
 after 2020. Thus, there may be measuring bias, and the result may be inconclusive.
 
-/newpage
 # References
 
 @opendatatorotno
