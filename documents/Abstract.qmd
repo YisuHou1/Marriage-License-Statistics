@@ -34,7 +34,7 @@ cleaned_data <- read_csv(here::here("data/cleaned_data.csv"))
 cleaned_data %>% ggplot(aes(x = date, y = marriage_licenses)) + 
   geom_point() + 
   labs(title = "Figure 1: Marriage Licenses Before and After Covid",
-       x = "Year", y = "Number of Licenses")
+       x = "Date (Year)", y = "Number of Licenses")
 ```
 &nbsp;&nbsp; Observing Figure 1, we can observe that the number of marriage licenses did not
 decrease after Covid-19. In fact, the data shows an increases in the peak values
