@@ -33,3 +33,4 @@ data_sim <-
   )
 
 write_csv(data_sim, file = "data/simulated.csv")
+
